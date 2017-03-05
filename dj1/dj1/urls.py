@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^hello/', hello),
     url(r'^date/', date_time),
     url(r'^time/', date_time),
-    url(r'^smile/', smile),    
+    url(r'^smile/', smile),
+    url(r'^t1test/', t1test),
 ]

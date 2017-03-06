@@ -1,0 +1,1 @@
+<h1>this is {{number}} template named {{ temp_name }}.</h1>

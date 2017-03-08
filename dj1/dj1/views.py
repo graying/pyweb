@@ -22,6 +22,7 @@ def smile(request):
 
 def t1test(request):
     t = get_template("t1test.html")
-    c = template.Context({'temp_name': 'Eddys_Template', 'number': '12'})
+    name_set = ["Eddy", "Hugo", "Edison"]
+    c = template.Context({'temp_name': 'Eddys_Template', 'number': '12', 'name_set': name_set})
 
     return HttpResponse(t.render(c))

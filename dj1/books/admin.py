@@ -1,8 +1,12 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import Author, Publisher, Book
 
-admin.site.register(Author)
+#use orderable list for admin tools.
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'email')
+    search_fields = ('first_name', 'last_name')
+
+# Register your models here.
+admin.site.register(Author, AuthorAdmin)
 admin.site.register(Publisher)
 admin.site.register(Book)

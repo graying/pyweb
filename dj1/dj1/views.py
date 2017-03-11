@@ -4,6 +4,8 @@ from django import template
 from django.http import HttpResponse
 from django.template.loader import get_template
 
+def index(request):
+    return HttpResponse("Hello, you are in the index page of dj1")
 
 def hello(request):
     return HttpResponse("Hello world!......")

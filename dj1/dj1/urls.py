@@ -24,6 +24,10 @@ urlpatterns = [
     url(r'^time/', date_time),
     url(r'^smile/', smile),
     url(r'^t1test/', t1test),
+    #http:///
+    url(r'^$', index),
+    #http://127.0.0.1:8000/polls/* ->
     url(r'^polls/', include('polls.urls')),
+    #http://127.0.0.1:8000/books/* ->
     url(r'^books/', include('books.urls')),
 ]

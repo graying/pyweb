@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LSC Glendale Menu Online</title>
+</head>
+<body>
+{% if menuitem %}
+  <ul>
+    {% for m in menuitem %}
+    <li>{{ m.category.category_text}}</li>
+    <li><strong>{{ m.menuitem_text }} - {{ m.menuitex_text_cn }}</strong></li>
+    <li>How Spicy:{{ m.spicy_level }}</li>
+    <table cellspacing="10">
+    <td><img src='{{ m.menuimage.url }}' alt='{{ m.menuitem_text }}' width=“300” height="200"/></td>
+    <td>
+      <table cellspacing="1">
+      <tr><strong>Ingredient</strong></tr>
+      {% for ingredient in m.ingredient.all %}
+      <dt>{{ingredient.ingredient_text}} - {{ingredient.ingredient_text_cn}}</dt>
+      {% endfor %}
+    </table>
+  </td>
+  </table>
+    <br/>
+    {% endfor %}
+  <ul/>
+{% else %}
+  <p>No Menu items are available/ </p>
+{% endif %}
+</body>
+</html>

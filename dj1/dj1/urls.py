@@ -13,7 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from dj1.views import *
 
@@ -30,4 +32,7 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     #http://127.0.0.1:8000/books/* ->
     url(r'^books/', include('books.urls')),
+    #http://127.0.0.1:8000/menu
+    url(r'^menu/', include('menu.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

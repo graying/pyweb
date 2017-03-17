@@ -27,6 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home2/media/media.lawrence.com/media/"
+#MEDIA_ROOT = os.path.join(BASE_DIR, '/')
+MEDIA_ROOT = '/Users/eddy/GitHub/pyweb/dj1/menu'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/menu/'
+
+
 
 # Application definition
 
@@ -38,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books.apps.BooksConfig',
+    'polls.apps.PollsConfig',
+    'menu.apps.MenuConfig',
 ]
 
 MIDDLEWARE = [

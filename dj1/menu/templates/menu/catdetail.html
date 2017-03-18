@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ category_text }}</title>
+</head>
+
+<body>
+    <h2>{{ category_text }}</h2><br />
+    {% if menuitem %}
+    <ul>
+        <strong>{% for m in menuitem %} {{ m.menuitem_text }} - {{ m.menuitex_text_cn }}</strong><br />
+        How Spicy:{{ m.spicy_level }}
+        <table cellspacing="10">
+            <td><img src='{{ m.menuimage.url }}' alt='{{ m.menuitem_text }}' width=“150” height="100" /></td>
+            <td>
+                <table cellspacing="1">
+                    <tr><strong>Ingredient</strong></tr>
+                    {% for ingredient in m.ingredient.all %}
+                    <dt>{{ingredient.ingredient_text}} - {{ingredient.ingredient_text_cn}}</dt> {% endfor %}
+                </table>
+            </td>
+        </table>
+        <br/> {% endfor %}
+        <ul/> {% else %}
+        <p>No Menu items are available/ </p>
+        {% endif %}
+</body>
+
+</html>

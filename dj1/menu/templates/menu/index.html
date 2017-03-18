@@ -20,45 +20,16 @@
             </table>
         </div>
         <div id="menu" style="background-color:white;height:700px;width:200px;float:left;">
-            <p>0.<a href="nutanix.html" target="myframe">Category</a></p>
-            <p>1.<a href="basehtml.html" target="myframe">Category</a></p>
-            <p>2.<a href="chunxiao.html" target="myframe">Category</a></p>
-            <p>The 3rd Part - <a href="table.html" target="myframe">Table and List Examples</a></p>
-            <p>
-                <a href="git-hub.html" target="myframe">Category</a>
-            </p>
+            <iframe src="category/" width="820" height="695" frameborder="0" name="menuframe"></iframe>
         </div>
         <div id="container" style="background-color:white;height:700px;width:824px;float:left;">
-            <!-- <iframe src="Nutanix.html" width="820" height="695" frameborder="0" name="myframe"></iframe> -->
-            {% if menuitem %}
-            <ul>
-                {% for m in menuitem %}
-                <li>{{ m.category.category_text}}</li>
-                <li><strong>{{ m.menuitem_text }} - {{ m.menuitex_text_cn }}</strong></li>
-                <li>How Spicy:{{ m.spicy_level }}</li>
-                <table cellspacing="10">
-                    <td><img src='{{ m.menuimage.url }}' alt='{{ m.menuitem_text }}' width=“300” height="200" /></td>
-                    <td>
-                        <table cellspacing="1">
-                            <tr><strong>Ingredient</strong></tr>
-                            {% for ingredient in m.ingredient.all %}
-                            <dt>{{ingredient.ingredient_text}} - {{ingredient.ingredient_text_cn}}</dt> {% endfor %}
-                        </table>
-                    </td>
-                </table>
-                <br/> {% endfor %}
-                <ul/> {% else %}
-                <p>No Menu items are available/ </p>
-                {% endif %}
+          <iframe src="category/1/" width="820" height="695" frameborder="0" name="myframe"></iframe>
         </div>
-        <div id="footer" style="background-color:cyan;text-align:center;">
-            <p>这里是footer<a href="http://yahoo.com">这是一个链接指向yahoo.com</a></p>
+        <div id="footer" style="background-color:white;text-align:left;">
+            <p>这里是footer<a href="/menu">这是一个链接指向menu</a></p>
         </div>
     </div>
 
-</body>
-
-<body>
 </body>
 
 </html>

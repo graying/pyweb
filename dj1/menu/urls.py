@@ -13,4 +13,3 @@ urlpatterns = [
     url(r'^category/(?P<category_id>[0-9]+)/$',
         views.cat_detail, name='cat_detail'),
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

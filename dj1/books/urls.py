@@ -10,4 +10,6 @@ urlpatterns = [
     # ex: books/author/5/
     url(r'^author/(?P<author_id>[0-9]+)/$',
         views.author_detail, name='author_detail'),
+    url(r'^search-form/$', views.search_form, name='search_form'),
+    url(r'^search/$', views.search, name='search'),
 ]

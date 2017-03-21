@@ -8,7 +8,7 @@
 <body>
     <div id="menu" style="background-color:white;height:700px;width:200px;float:left;">
         {% for cat in category %}
-        <p><a href='/menu/category/{{ forloop.counter }}' target="myframe" /> {{ cat.category_text }} </a>
+        <p><a href='/menu/category/{{ cat.id }}' target="myframe" /> {{ cat.category_text }} </a>
         </p>
         {% endfor %}
     </div>

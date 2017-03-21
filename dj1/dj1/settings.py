@@ -25,7 +25,7 @@ SECRET_KEY = 'zt5!65lr98vcc+msc=x^wzq&3^pe@w!iys(_ubw83bw+09bn@2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.0.5']
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home2/media/media.lawrence.com/media/"
@@ -35,8 +35,7 @@ MEDIA_ROOT = '/Users/eddy/GitHub/pyweb/dj1/menu'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/menu/'
-
+MEDIA_URL = '/image/'
 
 
 # Application definition

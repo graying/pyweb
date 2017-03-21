@@ -5,7 +5,12 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 
 def index(request):
-    return HttpResponse("Hello, you are in the index page of dj1")
+    values = request.META.items()
+    values.sort()
+    html = []
+    for k, v in values:
+        html.append('<tr><td>%s  :</td><td>%s</td><br/><tr>' % (k,v))
+    return HttpResponse(html)
 
 def hello(request):
     return HttpResponse("Hello world!......")

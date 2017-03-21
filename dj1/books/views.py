@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from .models import Author, Book, Publisher
 # Create your views here.
@@ -35,3 +35,10 @@ def author_detail(request, author_id):
     html = "author details: " + a.first_name + " " + a.last_name + "<br/><br/>"
     html = html + " Email Address: " + a.email
     return HttpResponse(html)
+
+def search_form(request):
+    return render_to_response('books/search_form.html')
+
+def search(request):
+    message = 'You are searching for: %s' % request.GET['q']
+    return HttpResponse(message)
